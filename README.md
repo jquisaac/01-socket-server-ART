@@ -17,3 +17,7 @@ Levantar servidor, cualquiera de estos dos comandos
 nodemon dist/
 node dist/
 ```
+
+Pruebas:
+```
+http://localhost:5000/mensajes
