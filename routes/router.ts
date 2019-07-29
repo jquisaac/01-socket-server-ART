@@ -29,6 +29,9 @@ router.post('/mensajes/:id', ( rep: Request , res: Response ) => {
     const de = rep.body.de;
     const id = rep.params.id;
 
+    console.log(id);
+    
+
     res.json({
         ok:true,
         cuerpo,

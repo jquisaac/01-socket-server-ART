@@ -11,13 +11,18 @@ server.start( () => {
     console.log(`Servidor corriendo en el puerto ${ server.port }`);
 });
 
-//BodyParser
+/** 
+ * BodyParser: Nos ayuda a leer peticion post y la serializa en un json
+ */
 server.app.use( bodyParser.urlencoded({ extended: true}));
 server.app.use( bodyParser.json());
 
-//CORS
-/*Con esta configuracion cualquier persona puede llamar estos servicios*/
+/**
+ * CORS: Con esta configuracion cualquier persona puede llamar estos servicios
+ */
 server.app.use ( cors({ origin: true, credentials: true}))
 
-//Rutas de servicios
+/**
+ *  Rutas de servicios
+ */
 server.app.use('/', router);
