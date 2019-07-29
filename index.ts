@@ -5,7 +5,7 @@ import cors from 'cors';
 
 
 
-const server = new Server();
+const server = Server.instance;
 
 server.start( () => {
     console.log(`Servidor corriendo en el puerto ${ server.port }`);
