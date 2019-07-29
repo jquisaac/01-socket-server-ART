@@ -7,13 +7,14 @@ npm install express
 npm install cors
 npm install body-parser
 npm install socket.io
-
+```
 
 Dependencia de desarrollo:
 ```
 npm install @types/express --save-dev
 npm install @types/cors --save-dev
 npm install @types/socket.io --save-dev
+```
 
 Reconstruir los módulos de Node
 ```
@@ -56,6 +57,7 @@ POST: http://localhost:5000/mensajes/:id
         "de": "RestUser",
         "id": "abc"
     }
+```
 
 ### Changelog:
 
