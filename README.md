@@ -62,12 +62,15 @@ POST: http://localhost:5000/mensajes/:id
 ### Changelog:
 
 v1.1.0
-* Configuracion Socket.io
-* Implementacion patron singleton
+
+* Configuracion Socket.io.
+* Implementacion patron singleton.
+
 v1.0.1
-* Documentacion codigo
+* Documentacion codigo.
+
 v1.0.0
-* Primer commit
-* Meto GET
-* Metodo POST
-* Metodo POST con parametros
+* Primer commit.
+* Meto GET.
+* Metodo POST.
+* Metodo POST con parametros.
