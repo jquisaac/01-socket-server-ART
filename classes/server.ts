@@ -3,6 +3,8 @@ import { SERVER_PORT } from '../global/enviroment';
 import socketIO from 'socket.io';
 import http from 'http';
 
+import * as socket from '../sockets/socket';
+
 export default class Server{
 
     private static _instance: Server;
@@ -32,7 +34,12 @@ export default class Server{
         
         this.io.on('connection', cliente => {
             console.log('Nuevo cliente conectado');
+
+            //Mensajes
+            socket.mensaje( cliente );
             
+            //Desconectar
+            socket.desconectar( cliente );
         });
     }
 

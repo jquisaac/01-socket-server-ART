@@ -23,7 +23,6 @@ npm install
 
 Generar el DIST
 ```
-
 tsc -w
 ```
 
@@ -61,8 +60,10 @@ POST: http://localhost:5000/mensajes/:id
 
 ### Changelog:
 
-v1.1.0
+v1.2.0
+* Evento emit mensaje
 
+v1.1.0
 * Configuracion Socket.io.
 * Implementacion patron singleton.
 
