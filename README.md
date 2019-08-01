@@ -60,6 +60,9 @@ POST: http://localhost:5000/mensajes/:id
 
 ### Changelog:
 
+v1.2.1
+* Evento emit
+
 v1.2.0
 * Evento emit mensaje
 

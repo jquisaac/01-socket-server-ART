@@ -1,4 +1,5 @@
 import { Socket } from 'socket.io';
+import socketIO from 'socket.io';;
 
 export const desconectar = ( cliente: Socket) => {
     
@@ -12,9 +13,15 @@ export const desconectar = ( cliente: Socket) => {
  * Escuchar mensaje
  * @param clinete 
  */
-export const mensaje = ( cliente: Socket) => {
+export const mensaje = ( cliente: Socket, io: socketIO.Server) => {
 
     cliente.on('mensaje', ( payload: { de:string, cuerpo: string } ) => {
-        console.log('Mensaje recibido', payload);  
+        console.log('Mensaje recibido', payload); 
+        
+        /**
+         * Emito a todos los usuarios conectados
+         */
+        io.emit('mensaje-nuevo', payload );
+
     });
 }
