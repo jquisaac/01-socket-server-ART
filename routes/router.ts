@@ -11,6 +11,9 @@ router.get('/mensajes', ( rep: Request , res: Response ) => {
     });
 });
 
+/**
+ * Leer argumentos por posteo de datos
+ */
 router.post('/mensajes', ( rep: Request , res: Response ) => {
 
     const cuerpo = rep.body.cuerpo;
@@ -23,6 +26,9 @@ router.post('/mensajes', ( rep: Request , res: Response ) => {
     });
 });
 
+/**
+ * Leer argumentos por URL
+ */
 router.post('/mensajes/:id', ( rep: Request , res: Response ) => {
 
     const cuerpo = rep.body.cuerpo;
