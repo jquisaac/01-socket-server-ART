@@ -21,7 +21,7 @@ Reconstruir los módulos de Node
 npm install
 ```
 
-Generar el DIST
+Generar el DIST y escuchar todos los cambios
 ```
 tsc -w
 ```
