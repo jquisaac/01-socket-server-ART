@@ -1,5 +1,8 @@
 import { Router, Request, Response } from "express";
 
+/**
+ * En este archivo se crean los servicioes rest Get y Post
+ */
 
 export const router = Router();
 

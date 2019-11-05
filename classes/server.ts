@@ -51,6 +51,10 @@ export default class Server{
         });
     }
 
+    /**
+     * Levanta el servidor
+     * @param callback 
+     */
     start( callback : Function ){
         this.httpServer.listen( this.port, callback());        
     }
