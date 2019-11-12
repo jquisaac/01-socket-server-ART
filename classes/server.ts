@@ -25,18 +25,22 @@ export default class Server{
 
     }
 
+    /**
+     * Si ya existe una instancia, regresa esta instancia, si no, crea una nueva
+     */
     public static get instance(){
         return this._instance || (this._instance = new this() );
     }
 
     private escucharSockets(){
         console.log('Escuchando conexiones - sockets');   
-                
+        
+        //Escuchar evento connection
         this.io.on('connection', cliente => {            
 
             console.log(cliente.id);
 
-            //COnectar cliente
+            //Conectar cliente
             socket.conectarCliente ( cliente );
 
             //Configurar usuario

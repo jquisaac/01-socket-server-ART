@@ -5,6 +5,11 @@ import { Usuario } from '../classes/usuario';
 
 export const usuariosConectados = new UsuariosLista();
 
+
+/**
+ * Agrego el nuevo usuario a la lista de usuarios conectados
+ * @param cliente 
+ */
 export const conectarCliente = ( cliente: Socket ) =>{
 
     const usuario = new Usuario( cliente.id);
@@ -12,6 +17,10 @@ export const conectarCliente = ( cliente: Socket ) =>{
 
 }
 
+/**
+ * Escucha evento desconectar
+ * @param cliente 
+ */
 export const desconectar = ( cliente: Socket) => {
     
     cliente.on('disconnect', () => {

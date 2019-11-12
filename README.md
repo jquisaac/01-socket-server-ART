@@ -1,7 +1,7 @@
 
 # Socket-Server
 
-Servidor Rest en Express
+Servidor Rest en Express y Servidor SocketIO
 
 Librerias isntaladas:
 ```
@@ -62,6 +62,10 @@ POST: http://localhost:5000/mensajes/:id
 ```
 
 ### Changelog:
+
+v1.2.2
+* Manejo de usuarios
+* Envio de mensajes privados y publicos desde REST
 
 v1.2.1
 * Evento emit
