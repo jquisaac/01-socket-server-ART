@@ -63,6 +63,9 @@ POST: http://localhost:5000/mensajes/:id
 
 ### Changelog:
 
+v1.3
+* Recuperacion de usuarios en sesion
+
 v1.2.2
 * Manejo de usuarios
 * Envio de mensajes privados y publicos desde REST
