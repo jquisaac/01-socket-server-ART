@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
 import Server from "../classes/server";
+import { usuariosConectados } from '../sockets/socket';
 
 /**
  * En este archivo se crean los servicioes rest Get y Post
@@ -63,5 +64,41 @@ router.post('/mensajes/:id', ( rep: Request , res: Response ) => {
         cuerpo,
         de,
         id
+    });
+});
+
+
+/**
+ * Obtiene la lista de los usuarios conectados ID's
+ */
+router.get('/usuarios', ( req: Request, res: Response ) => {
+
+    const server = Server.instance;
+
+    server.io.clients( (err: any, clientes: string[]) => {
+        if ( err ) {
+            return res.json({
+                ok: false,
+                err
+            })
+        }
+        
+        res.json({
+            ok: true,
+            clientes
+        });
+ 
+    });
+
+});
+
+/**
+ * Obtener datos de usuarios conectados
+ */
+router.get('/usuarios/detalle', ( req: Request, res: Response ) => {
+
+    res.json({
+        ok: true,
+        clientes: usuariosConectados.getLista()
     });
 });
